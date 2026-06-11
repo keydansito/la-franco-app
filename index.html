@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Franco App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-placeholder">LA FRANCO APP</div>
+        </header>
+
+        <main class="app-menu">
+            
+            <a href="https://maps.google.com" target="_blank" class="menu-card">
+                <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="card-text">
+                    <h3>Sucursales</h3>
+                    <p>Cómo llegar a nuestros locales</p>
+                </div>
+            </a>
+
+            <a href="https://lafranco.com.ar" target="_blank" class="menu-card">
+                <div class="card-icon"><i class="fa-solid fa-shopping-cart"></i></div>
+                <div class="card-text">
+                    <h3>Tienda Online</h3>
+                    <p>Comprá desde tu celular</p>
+                </div>
+            </a>
+
+            <button class="menu-card btn-accion" id="btn-turno">
+                <div class="card-icon icon-turno"><i class="fa-solid fa-user-nurse"></i></div>
+                <div class="card-text">
+                    <h3>Farmacia de Turno</h3>
+                    <p>Consultá quién atiende hoy en la madrugada</p>
+                </div>
+            </button>
+
+            <div class="points-card">
+                <h3>Mis Puntos Fidely</h3>
+                <p>Ingresá tu DNI para consultar tu saldo de premios</p>
+                <div class="search-box">
+                    <input type="number" id="input-dni" placeholder="Ej: 35123456">
+                    <button id="btn-puntos"><i class="fa-solid fa-search"></i></button>
+                </div>
+                <div id="resultado-puntos" class="puntos-display hidden"></div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
