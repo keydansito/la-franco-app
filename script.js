@@ -1,7 +1,7 @@
 // 1. Botón de Farmacia de Turno
 document.getElementById('btn-turno').addEventListener('click', async () => {
     try {
-        const respuesta = await fetch('http://localhost:3000/turno');
+        const respuesta = await fetch('https://la-franco-app.onrender.com/turno');
         const datos = await respuesta.json();
 
         const tarjetaTurno = document.getElementById('btn-turno');
@@ -28,7 +28,7 @@ document.getElementById('btn-puntos').addEventListener('click', async () => {
     }
 
     try {
-        const respuesta = await fetch(`http://localhost:3000/puntos?dni=${dni}`);
+        const respuesta = await fetch(`https://la-franco-app.onrender.com/puntos?dni=${dni}`);
         const datos = await respuesta.json();
 
         displayResultado.classList.remove('hidden');

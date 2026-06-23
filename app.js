@@ -10,10 +10,11 @@ const PORT = process.env.PORT || 3000;
 
 // ACTIVAMOS LOS PERMISOS (Ahora que 'app' ya existe, le asignamos CORS)
 app.use(cors()); // Esto le dice al servidor: "Aceptá peticiones de mi propia compu"
+app.use(express.static(__dirname)); // Le dice a Node que comparta el HTML, CSS y JS con el mundo
 
 // 1. Ruta de bienvenida
 app.get('/', (req, res) => {
-    res.send('¡Servidor de La Franco App activo y esperando conexiones!');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // 2. Sistema de turnos inteligente (El que ya probamos y funciona genial)
